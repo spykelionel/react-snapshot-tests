@@ -6,9 +6,7 @@ import PropTypes from 'prop-types';
  *
  * @param {Object} props - List of items
  */
-function Items(props) {
-  const { items = [] } = props;
-
+function Items({items}) {
   // A single item in the list, render a span.
   if (items.length === 1) {
     return <span className='item-message'>{items[0]}</span>;
@@ -32,7 +30,7 @@ Items.propTypes = {
 };
 
 Items.defaultProps = {
-  items: []
+  items: ["Def0", "Def1", "Def2"]
 };
 
 export default Items;
