@@ -11,20 +11,20 @@ function Items(props) {
 
   // A single item in the list, render a span.
   if (items.length === 1) {
-    return <span>{items[0]}</span>;
+    return <span className='item-message'>{items[0]}</span>;
   }
 
   // Multiple items on the list, render a list.
   if (items.length > 1) {
     return (
       <ul>
-        {items.map(item => <li key={item}>{item}</li>)}
+        {items.map(item => <li className='item-message' key={item}>{item}</li>)}
       </ul>
     );
   }
 
   // No items on the list, render an empty message.
-  return <span>No items in list</span>;
+  return <span className='item-message'>No items in list</span>;
 }
 
 Items.propTypes = {
